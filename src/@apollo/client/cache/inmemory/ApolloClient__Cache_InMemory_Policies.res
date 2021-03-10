@@ -39,7 +39,7 @@ module KeyFieldsFunction = {
 }
 
 // export declare const defaultDataIdFromObject: KeyFieldsFunction;
-@bs.module("@apollo/client")
+@bs.module("@apollo/client/core")
 external defaultDataIdFromObject: KeyFieldsFunction.t = "defaultDataIdFromObject"
 
 module TypePolicy = {

@@ -22,26 +22,26 @@ module Js_ = {
 
   module Static = {
     // static empty(): ApolloLink;
-    @bs.module("@apollo/client") @bs.scope("ApolloLink")
+    @bs.module("@apollo/client/core") @bs.scope("ApolloLink")
     external empty: unit => t = "empty"
     // static from(links: (ApolloLink | RequestHandler)[]): ApolloLink;
-    @bs.module("@apollo/client") @bs.scope("ApolloLink")
+    @bs.module("@apollo/client/core") @bs.scope("ApolloLink")
     external from: array<t> => t = "from"
     // static split(test: (op: Operation) => boolean, left: ApolloLink | RequestHandler, right?: ApolloLink | RequestHandler): ApolloLink;
-    @bs.module("@apollo/client") @bs.scope("ApolloLink")
+    @bs.module("@apollo/client/core") @bs.scope("ApolloLink")
     external split: (~test: Operation.Js_.t => bool, ~whenTrue: t, ~whenFalse: t) => t = "split"
     // static execute(link: ApolloLink, operation: GraphQLRequest): Observable<FetchResult>;
-    @bs.module("@apollo/client") @bs.scope("ApolloLink")
+    @bs.module("@apollo/client/core") @bs.scope("ApolloLink")
     external execute: (
       t,
       GraphQLRequest.t,
     ) => Observable.t<FetchResult.Js_.t<Js.Json.t>, Js.Exn.t> = "execute"
     // static concat(first: ApolloLink | RequestHandler, second: ApolloLink | RequestHandler): ApolloLink;
-    @bs.module("@apollo/client") @bs.scope("ApolloLink")
+    @bs.module("@apollo/client/core") @bs.scope("ApolloLink")
     external concat: (t, t) => t = "concat"
   }
 
-  @bs.module("@apollo/client") @bs.new
+  @bs.module("@apollo/client/core") @bs.new
   external make: RequestHandler.Js_.t => t = "ApolloLink"
 
   @bs.send external concat: (t, t) => t = "concat"

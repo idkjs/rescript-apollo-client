@@ -8,7 +8,7 @@ module Js_ = {
   //     requester: RequestHandler;
   //     constructor(options?: HttpOptions);
   // }
-  @bs.module("@apollo/client") @bs.new
+  @bs.module("@apollo/client/core") @bs.new
   external make: HttpOptions.Js_.t => ApolloLink.Js_.t = "HttpLink"
 }
 

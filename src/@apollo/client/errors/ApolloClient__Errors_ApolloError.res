@@ -94,7 +94,7 @@ module Js_ = {
   //     errorMessage?: string;
   //     extraInfo?: any;
   // });
-  @bs.module("@apollo/client") @bs.new
+  @bs.module("@apollo/client/core") @bs.new
   external make: make_args => t = "ApolloError"
 
   // This is not an exhaustive check. It is intended to address the most common subscription error issues only
@@ -108,7 +108,7 @@ module Js_ = {
             } else if (error && typeof error.message === "string" && error.extensions) {
               return makeApolloError({graphQLErrors: [error]});
             } else {
-              return makeApolloError({networkError: ensureError(error)}) 
+              return makeApolloError({networkError: ensureError(error)})
             }
           }
         `)(error, make, ensureError)

@@ -385,7 +385,7 @@ module Js_ = {
     ~options: DataProxy.WriteQueryOptions.Js_.t<'jsData, 'jsVariables>,
   ) => unit = "writeQuery"
 
-  @bs.module("@apollo/client") @bs.new
+  @bs.module("@apollo/client/core") @bs.new
   external make: ApolloClientOptions.Js_.t => t = "ApolloClient"
 }
 

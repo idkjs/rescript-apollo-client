@@ -67,7 +67,7 @@ module Js_ = {
   // }
   type t = ApolloCache.Js_.t<Js.Json.t>
 
-  @bs.module("@apollo/client") @bs.new
+  @bs.module("@apollo/client/core") @bs.new
   external make: InMemoryCacheConfig.Js_.t => t = "InMemoryCache"
 }
 
